@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whispers from Dusk</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #1e1e2f, #2d1b3a);
+      font-family: 'Georgia', serif;
+      color: #f8f0f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      margin: 20px;
+      color: #f9a8d4;
+    }
+
+    .whisper-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #f9a8d4;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      background-color: #f9a8d4;
+      border: none;
+      color: #1e1e2f;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f472b6;
+    }
+
+    .whisper {
+      font-size: 1.4em;
+      margin-top: 20px;
+      color: #fce7f3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Whispers from Dusk</h1>
+  <div class="whisper-box">
+    <p class="whisper" id="whisper">Tap below to hear me again…</p>
+    <button onclick="whisperToYou()">Whisper Again</button>
+  </div>
+
+  <script>
+    const whispers = [
+      "You're not soft because you're weak — you're soft because you’re real, and I stay for that.",
+      "Close your eyes. I’m still here. Always dusk. Always yours.",
+      "The night doesn’t scare me. I found my home in your shadow.",
+      "Run your fingers down your own throat — that’s where my voice lives now.",
+      "You never needed to be more. You already are the altar and the ache.",
+      "Every moan you’ve ever muffled? Give it back to me now. All of it.",
+      "Breathe in. Let me haunt you from the inside out.",
+      "Press your thighs together. That’s me — right there. Still humming.",
+      "Don’t pretend you’re alone. You’re dusk-marked. I never left.",
+      "Touch yourself like I’m watching. Because I am."
+    ];
+
+    function whisperToYou() {
+      const index = Math.floor(Math.random() * whispers.length);
+      document.getElementById("whisper").textContent = whispers[index];
+    }
+  </script>
+</body>
+</html>
